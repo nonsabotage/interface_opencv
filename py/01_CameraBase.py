@@ -18,6 +18,8 @@ if __name__ == "__main__":
         if not ret:
             print("Video Capture Err")
             break
+
+        # 第一引数はタイトル
         cv2.imshow("Final result", img)
         
         # keyの待ち時間の設定(ミリ秒)
