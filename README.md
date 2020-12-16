@@ -22,7 +22,7 @@ GPU版のプログラムをざっとみた限り，
 
 - pythonは3.6にすること
 - python fileで実行すること
-    - ipynbやjupyterからだと動作がおかしいことがる
+    - ipythonやjupyterからだと動作がおかしいことがる
 
 
 
