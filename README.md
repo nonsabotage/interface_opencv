@@ -57,5 +57,20 @@ GPU版のプログラムをざっとみた限り，
     - 画像のグレースケール化
 - 06_Binary.py
     - カラーとグレー画像の２値化
+    - カラー画像を２値化しても意味がなく，グレースケールを挟む必要がある
+    - 2値の種類としては次がある
+        - cv2.TRESH_BINARY
+        - cv2.TRESH_BINARY_INV
+        - cv2.TRESH_BINARY + cv2.TRESH_OTHU
+        - cv2.TRESH_BINARY + cv2.TRESH_TRIANGLE
+        - cv2.TRESH_TOZERO_INV
+- 07_Binary_Tozero_inv.py
+    - cv2.TRESH_TOZERO_INVを利用
+        - 閾値以下の値は残り，それ以外は０
+        - 赤(0, 0, 255)を128を閾値にすると(0, 0, 0)になる
+        
     
+
+
+
 
