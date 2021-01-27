@@ -68,9 +68,22 @@ GPU版のプログラムをざっとみた限り，
     - cv2.TRESH_TOZERO_INVを利用
         - 閾値以下の値は残り，それ以外は０
         - 赤(0, 0, 255)を128を閾値にすると(0, 0, 0)になる
-        
-    
+- 08_Binary_TRUN.py
+    - 私の環境にはTHRESH_TRUNなどないのでTHRESH_TRUNCを使った
 
+> [x for x in dir(cv2) if re.match("THRESH", x)]
+> Out[7]: 
+> ['THRESH_BINARY',    
+>  'THRESH_BINARY_INV',
+>  'THRESH_MASK',      
+>  'THRESH_OTSU',      
+>  'THRESH_TOZERO',    
+>  'THRESH_TOZERO_INV',
+>  'THRESH_TRIANGLE',
+>  'THRESH_TRUNC']
 
+- 12_Separation.py
+    - GBR画像を画層ごとに分割
+    - cv2.cplit
 
 
