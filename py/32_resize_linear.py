@@ -6,16 +6,18 @@ def __main():
     img = createPattern()
     org = img.copy()
 
-    img = getResize(img)
+    img1 = getResize(img, cv2.INTER_LINEAR)
+    img2 = getResize(img, cv2.INTER_LANCZOS4)
 
     cv2.imshow("Original", org)
-    cv2.imshow("INTER_LINEAR", img)
+    cv2.imshow("INTER_LINEAR", img1)
+    cv2.imshow("INTER_LANCZOS4", img2)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
     
 
-def getResize(src):
-    basePixSize = 240
+def getResize(src, argrythm):
+    basePixSize = 1000
     height, width, _ = src.shape
 
     largeSize  = max(height, width)
@@ -24,13 +26,14 @@ def getResize(src):
     dst = cv2.resize(
         src,
         (int(width * resizeRate), int(height * resizeRate)),  
-        interpolation = cv2.INTER_LINEAR,
+        interpolation = argrythm,
     )
 
     return dst
+    
 
 def createPattern():
-    square = 1000
+    square = 500
     border = 2
     size   = np.array([square, square, 3])
     color  = np.array([255., 255., 255.])

@@ -119,6 +119,16 @@ GPU版のプログラムをざっとみた限り，
     - 文字表示は文字の左下が原点となる
         - (0, 0)を指定すると画面上の(0, 0)は左上なので文字が出力されていないように見える
 
+## サイズ変換
+
 - 31_resize_default.py
     - 画像リサイズのひな形
+- 32_resize_linear.py
+    - リサイズのアルゴリズムの指定
+        - cv2.INTER_LINEAR
+        - cv2.INTER_NEAREST
+        - cv2.INTER_CUBIC
+        - cv2.INTER_AREA
+        - cv2.INTER_LANCZOS4
+
 
