@@ -19,6 +19,7 @@ def __main():
         img05 = getBilateral(img, 5)
         cv2.imshow("15x15", img15)
         cv2.imshow("5x5",   img05)
+        # 10mm秒まってからキー入力がなければ続く
         if cv2.waitKey(10) > -1:
             break
     
