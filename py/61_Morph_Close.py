@@ -40,7 +40,6 @@ def __setNoise(img, color):
         y = int(random.uniform(10, 710))
         angle = (x, y, 3, 3)
         cv2.rectangle(img, angle, color, -1)
-
     return img
 
 
@@ -55,7 +54,6 @@ def setCrossLines(img, color):
     img = cv2.line(img, (int(width/2), padding), (int(width/2), height-padding), color, border, cv2.LINE_AA)
     # 斜線
     img = cv2.line(img, (padding, padding), (width-padding, height-padding), color, border, cv2.LINE_AA)
-
     __setNoise(img, color)
 
     return img
