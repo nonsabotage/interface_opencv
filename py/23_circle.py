@@ -12,6 +12,7 @@ if __name__ == "__main__":
     # 直線の描画
     cv2.circle(
         img = img, 
+        # 横，縦で座標を指定
         center = (200, 200), 
         radius = 100,
         color = color, 
