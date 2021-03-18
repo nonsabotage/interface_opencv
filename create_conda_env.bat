@@ -3,6 +3,7 @@ conda activate cv2
 
 pip install ipykernel
 pip install opencv-python
+pip install opencv-contrib-python
 pip install matplotlib
 pip install japanize_matplotlib
 conda install -y numpy
